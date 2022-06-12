@@ -1,3 +1,54 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "no-nested-ternary": "off",
+  "react/function-component-definition": [
+    2,
+    {
+      "namedComponents": "arrow-function"
+    }
+  ],
+  "react/jsx-no-useless-fragment": [
+    2,
+    {
+      "allowExpressions": true
+    }
+  ],
+  "react/jsx-closing-bracket-location": "warn",
+  "import/no-anonymous-default-export": 0,
+  "react-hooks/rules-of-hooks": "error",
+  "react-hooks/exhaustive-deps": "warn",
+  "react/require-default-props": 0,
+  // "react/prop-types": "error",
+  "react/no-namespace": "off",
+  "react/prefer-exact-props": "off",
+  "react/no-arrow-function-lifecycle": "off",
+  "react/no-invalid-html-attribute": "off",
+  "react/no-unused-class-component-methods": "off",
+  "react/default-props-match-prop-types": [
+    "error",
+    {
+      "allowRequiredDefaults": true
+    }
+  ],
+  "import/prefer-default-export": "off",
+  "import/no-named-as-default-member": "off",
+  "import/no-named-as-default": "off",
+  "jsx-a11y/href-no-hash": "off",
+  "no-underscore-dangle": "off",
+  "react/forbid-prop-types": "off",
+  "max-len": "off",
+  "global-require": "off",
+  "quote-props": "off",
+  "arrow-parens": "off",
+  "default-param-last": "off",
+  "react/jsx-closing-tag-location": 0,
+  "react/jsx-filename-extension": [
+    1,
+    {
+      "extensions": [
+        ".js",
+        ".jsx"
+      ]
+    }
+  ]
 }
