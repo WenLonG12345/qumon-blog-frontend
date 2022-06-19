@@ -22,17 +22,15 @@ const mapState = ({ articlesModel }) => ({
 });
 
 const Home = ({ articles }) => {
-  console.log("home", articles);
-
   return (
-    <Container maxW={"container.lg"} p="10">
+    <Box p={10}>
       <Heading as="h2">Articles</Heading>
       <SimpleGrid columns={[1, 2, 2, 3]} spacing={10} mt={5}>
         {articles.map((item) => {
           return <ArticleCard item={item} key={item.id}/>;
         })}
       </SimpleGrid>
-    </Container>
+    </Box>
   );
 };
 
@@ -40,6 +38,7 @@ export async function getStaticProps() {
   const res = await fetchAPI("/articles", {
     populate: {
       author: { populate: ['picture'] },
+      user: {populate: ['avatar']},
       category: { populate: "*" },
       cover: { populate: "*" },
     },

@@ -14,10 +14,12 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import React from "react";
 import { CgProfile } from "react-icons/cg";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const { toggleColorMode } = useColorMode();
   const toggleColorModeIcon = useColorModeValue(<MoonIcon />, <SunIcon />);
+  const router = useRouter();
 
   return (
     <Container
@@ -41,13 +43,12 @@ const Navbar = () => {
         <Image src="/logo.svg" width="100px" height="100px" alt="logo" />
 
         <HStack>
-          <Tooltip label={'Login to constribute more'}>
-            <IconButton
-              icon={<CgProfile size={20} />}
-              variant="ghost"
-              aria-label="Profile"
-            />
-          </Tooltip>
+          <IconButton
+            icon={<CgProfile size={20} />}
+            variant="ghost"
+            aria-label="Profile"
+            onClick={() => router.push('/login')}
+          />
 
           <IconButton
             ml={1}

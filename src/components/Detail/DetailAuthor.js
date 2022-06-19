@@ -1,10 +1,10 @@
+import React from "react";
 import { HStack, Image, Text } from "@chakra-ui/react";
 import dayjs from "dayjs";
-import React from "react";
 
 const baseUrl = process.env.API_URL;
 
-const ArticleAuthor = ({ avatar, name, date }) => {
+const DetailAuthor = ({avatar, name, date}) => {
   return (
     <HStack mt={5} spacing="2" display="flex" alignItems="center">
       {avatar && (
@@ -22,4 +22,4 @@ const ArticleAuthor = ({ avatar, name, date }) => {
   );
 };
 
-export default ArticleAuthor;
+export default DetailAuthor;

@@ -11,8 +11,16 @@ export default {
       const res = await request(`${baseUrl}/api/articles`);
 
       const {status, data} = res;
+    },
 
-      console.log('getAll', status, data);
+    async uploadImage(file) {
+      const formData = new FormData();
+
+      formData.append('files', file);
+
+      const res = await request(`${baseUrl}/api/upload`, formData);
+
+      console.log('upload', res.status, res.data);
     }
   })
 }
